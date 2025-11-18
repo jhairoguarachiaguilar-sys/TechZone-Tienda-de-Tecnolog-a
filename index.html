@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ElectroShop Gamer — Inicio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">⚡ ElectroShop Gamer</a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="productos.html" class="nav-link">Productos</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+
+      <button id="openCartBtn" class="icon-btn" aria-label="Abrir carrito">
+        🛒 <span id="cartCount">0</span>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú móvil">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid fade-in">
+      <div class="hero-left">
+        <h1>Potencia tu setup. Juega como un profesional.</h1>
+        <p class="lead">Ofertas exclusivas en laptops, monitores y periféricos.</p>
+
+        <div class="hero-ctas">
+          <a class="btn primary" href="productos.html">Comprar Ahora</a>
+          <a class="btn ghost" href="#auspiciadores">Auspiciadores</a>
+        </div>
+      </div>
+
+      <div class="hero-right floating">
+        <img 
+          src="https://i0.wp.com/www.madboxpc.com/wp-content/uploads/2025/01/Strix_G18_KV_A-G16-and-G18-sitting-next-to-each-other.jpg?fit=1500%2C843&ssl=1"
+          alt="Laptop ASUS ROG Strix" 
+          class="hero-product"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOCIONES -->
+  <section class="container promociones-section">
+    <h2>Promociones del Mes</h2>
+
+    <div class="carousel" id="promoCarousel">
+      <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+
+      <div class="carousel-track">
+        <article class="promo-item">
+          <img 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2z-aU2zBYvMAKOdJ2E1DPGYRfZ2X4ncP8Tw&s"
+            alt="Monitor Samsung 27 pulgadas"
+          />
+          <div>
+            <strong>Monitor Samsung 27"</strong>
+            <p>165Hz – $279</p>
+          </div>
+        </article>
+
+        <article class="promo-item">
+          <img 
+            src="https://m.media-amazon.com/images/I/61mpMH5TzkL._AC_SL1500_.jpg"
+            alt="Mouse Logitech G502"
+          />
+          <div>
+            <strong>Logitech G502</strong>
+            <p>$79</p>
+          </div>
+        </article>
+
+        <article class="promo-item">
+          <img 
+            src="data:image/jpeg;base64,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"
+            alt="Teclado Razer Huntsman"
+          />
+          <div>
+            <strong>Razer Huntsman</strong>
+            <p>$129</p>
+          </div>
+        </article>
+      </div>
+
+      <button class="carousel-btn next" aria-label="Siguiente">›</button>
+    </div>
+  </section>
+
+  <!-- DESTACADOS -->
+  <section class="container destacados">
+    <h2>Destacados</h2>
+
+    <div class="grid featured-grid">
+      <a class="card" href="productos.html#laptops">
+        <img 
+          src="https://http2.mlstatic.com/D_NQ_NP_2X_977147-MBO95732218428_102025-T.webp"
+          alt="Laptop gaming ROG Strix"
+        />
+        <div><strong>ROG Strix</strong><p>Laptop gaming premium.</p></div>
+      </a>
+
+      <a class="card" href="productos.html#monitores">
+        <img 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ4HDwa6-xSucN0cESD43WyPCimpB9lRSkmg&s"
+          alt="Monitor Samsung 27 pulgadas curvo"
+        />
+        <div><strong>Samsung 27"</strong><p>Curvo • 165Hz</p></div>
+      </a>
+
+      <a class="card" href="productos.html#sillas">
+        <img 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCQuegPSD_XTAZzhcIdhcmv15dxEcjlfOkhQ&s"
+          alt="Silla gaming Razer Iskur"
+        />
+        <div><strong>Razer Iskur</strong><p>Máxima ergonomía.</p></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- AUSPICIADORES -->
+  <section id="auspiciadores" class="container auspiciadores">
+    <h2>Auspiciadores Oficiales</h2>
+
+    <div class="sponsor-logos">
+      <img src="https://logowik.com/content/uploads/images/424_asus.jpg" alt="Asus Logo">
+      <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/about-nvidia/logo-and-brand/02-nvidia-logo-color-grn-500x200-4c25-p@2x.png" alt="NVIDIA Logo">
+      <img src="data:image/png;base64,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" alt="Logitech Logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFO0U15fHrbvj8nR-E-8YDFo5JiDb4_eaDEQ&s" alt="Razer Logo">
+      <img src="https://images.steamusercontent.com/ugc/1002557701827770568/5065A15BD82BCFBCDA57ADBDEAA84B10E49B5398/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="HyperX Logo">
+    </div>
+  </section>
+
+  <!-- CARRITO LATERAL -->
+  <aside id="cartPanel" class="cart-panel" aria-hidden="true">
+    <header class="cart-header">
+      <h4>Tu Carrito</h4>
+      <button id="closeCartBtn" aria-label="Cerrar carrito">✖</button>
+    </header>
+
+    <ul id="cartItems"></ul>
+
+    <div class="cart-footer">
+      <p>Total: $<span id="cartTotal">0.00</span></p>
+      <button id="checkoutBtn" class="btn primary">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>ElectroShop Gamer</strong><p>Oruro • soporte@electroshop.com</p></div>
+      <div><strong>Horario</strong><p>09:00 - 19:00</p></div>
+      <div><strong>Desarrollador</strong><p>Jhairo Lionel Guarachi</p></div>
+      <div><strong>Síguenos</strong><p>Facebook | Instagram | Twitter</p></div>
+    </div>
+    <p class="copyright">© 2025 ElectroShop Gamer</p>
+  </footer>
+
+</body>
+</html>

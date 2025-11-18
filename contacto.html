@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ElectroShop Gamer — Contacto</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">⚡ ElectroShop Gamer</a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="productos.html" class="nav-link">Productos</a>
+        <a href="contacto.html" class="nav-link active">Contacto</a>
+      </nav>
+
+      <button id="openCartBtn" class="icon-btn" aria-label="Abrir carrito">
+        🛒 <span id="cartCount">0</span>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú móvil">☰</button>
+    </div>
+  </header>
+
+  <!-- SECCIÓN CONTACTO -->
+  <section class="container contacto">
+    <h1>Contacto</h1>
+
+    <div class="contact-grid">
+
+      <!-- Información de contacto -->
+      <div class="contact-info">
+        <h3>Información de la Tienda</h3>
+        <p>📍 Av. Tecnológica #505 — Oruro</p>
+        <p>📧 soporte@electroshop.com</p>
+        <p>📞 +591 72000000</p>
+
+        <h3>Desarrollador</h3>
+        <p>👤 Jhairo Lionel Guarachi</p>
+        <p>✉ jhairo.dev@example.com</p>
+      </div>
+
+      <!-- Formulario -->
+      <form class="contact-form" aria-label="Formulario de contacto">
+        <h3>Envíanos un mensaje</h3>
+
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Tu nombre"
+          required
+          aria-label="Tu nombre"
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Correo electrónico"
+          required
+          aria-label="Correo electrónico"
+        />
+
+        <textarea
+          name="mensaje"
+          rows="5"
+          placeholder="Mensaje..."
+          required
+          aria-label="Mensaje"
+        ></textarea>
+
+        <button class="btn primary" type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CARRITO -->
+  <aside id="cartPanel" class="cart-panel" aria-hidden="true">
+    <header class="cart-header">
+      <h4>Tu Carrito</h4>
+      <button id="closeCartBtn" aria-label="Cerrar carrito">✖</button>
+    </header>
+
+    <ul id="cartItems"></ul>
+
+    <div class="cart-footer">
+      <p>Total: $<span id="cartTotal">0.00</span></p>
+      <button id="checkoutBtn" class="btn primary">Finalizar compra</button>
+    </div>
+  </aside>
+
+</body>
+</html>
